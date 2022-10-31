@@ -1,0 +1,193 @@
+body {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  font-family:Arial, Helvetica, sans-serif;
+  flex-direction: column;
+  align-items: stretch;
+  display: flex;
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color:white;
+}
+
+input {
+  border:none;
+  background: none;
+  color:white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  font-size: large;
+}
+
+.big-input {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  background-color: blue;
+}
+
+.header .left {
+  width: 33%;
+  padding: 0px 10px 0px 10px;
+  color:white;
+}
+
+.header .center {
+  width: 33%;
+  padding: 0px 10px 0px 10px;
+  color:white;
+  text-align: center;
+}
+
+.header .right {
+  width: 33%;
+  padding: 10px;
+  text-align: right;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.workout-list {
+  display: flex;
+  flex: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+th {
+  color:white;
+  background-color: blue;
+  padding: 5px 10px 5px 10px;
+}
+
+.workout-list td {
+  padding: 0px 10px 0px 10px;
+  cursor: pointer;
+}
+
+.workout-list .row1 {
+  background-color: rgb(209, 247, 255);
+}
+
+.workout-list .row2 {
+  background-color: rgb(195, 218, 254);
+}
+
+.confirm-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,.5);
+  z-index: 2;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  text-align: center;
+
+}
+
+.confirm-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  z-index: 1;
+  border-radius: 15px;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+.cancel {
+  background-color: rgb(226, 114, 114);
+  color:white;
+  padding:5px;
+  width:fit-content;
+  min-width: 250px;
+  margin: auto;
+  border-radius: 10px;
+  cursor:pointer;
+}
+
+.confirm {
+  background-color: rgb(0, 211, 53);
+  color:white;
+  padding:5px;
+  width:fit-content;
+  min-width: 250px;
+  margin: auto;
+  border-radius: 10px;
+  cursor:pointer;
+}
+
+.new-button {
+  background-color: rgb(211, 169, 0);
+  color:white;
+  padding:5px;
+  width:fit-content;
+  min-width: 250px;
+  margin: auto;
+  border-radius: 10px;
+  cursor:pointer;
+}
+
+.cancel :hover {
+  background-color: rgb(255, 189, 189);
+}
+
+.confirm :hover {
+  background-color: rgb(118, 253, 152);
+}
+
+.new-workout {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: rgb(93, 101, 255);
+  z-index: 1;
+  border-radius: 15px;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  padding: 20px;
+  color:black;
+}
+
+.content {
+  display:flex;
+  flex-grow:1
+}
+
+.header, .main, .footer {
+  flex-shrink: 0;
+}
+
+.footer {
+  display:flex;
+  background-color: blue;
+  justify-content: center;
+  color:white;
+  cursor:pointer;
+}
+
+.text-popup {
+  background-color: white;
+  position: absolute;
+  margin-left: 50%;
+  margin-right: 50%;
+  padding: 25px;
+  border-radius: 15px;
+  font-size: larger;
+  font-weight: bolder;
+}
