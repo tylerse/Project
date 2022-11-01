@@ -9,3 +9,6 @@ Purpose:  The server will periodically check the microservices.txt file for inpu
  
  It will then return a JSON in the format:
  {"Return": "[String result]"}
+ 
+ ![image](https://user-images.githubusercontent.com/71523039/199155260-c2569f35-7cb5-4ad4-837b-123e3ae088d7.png)
+
