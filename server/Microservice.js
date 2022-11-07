@@ -37,7 +37,6 @@ const write = (data) => {
         if (err) throw err;
         console.log('Write OK: ' + filename);        
       });
-    fs.close();
 }
 
 async function sleep(msec) {
