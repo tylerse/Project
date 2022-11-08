@@ -4,11 +4,11 @@ Author: Sean Tyler
 
 # Encryption/Decryption Microservice
 
-###Purpose:  
+### Purpose:  
 The server will periodically check the microservices.txt file for input.  
 It will then convert that input using the parameters provided through a Caeser Cipher.
 
-###Input
+### Input
 The format for the JSON parameter is:
 
 {{
@@ -18,7 +18,7 @@ The format for the JSON parameter is:
 "1":"['Encrypt' or 'Decrypt', depending on desired action]"
 }}
  
- ###Return
+ ### Return
  The program will then return a JSON in the format:
  {"Return": "[String result]"}
  
