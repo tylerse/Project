@@ -11,11 +11,11 @@ It will then convert that input using the parameters provided through a Caeser C
 ### Input
 The format for the JSON parameter is:
 
-{{
-"user_input_to_encrypt": "[String to Encrypt]",
-"encryption_key":"[Spaces to shift by Caesar Cipher]",
-"user_input_to_decrypt":"[String to Decrypt]",
-"1":"['Encrypt' or 'Decrypt', depending on desired action]"
+{{  
+"user_input_to_encrypt": "[String to Encrypt]",  
+"encryption_key": "[Spaces to shift by Caesar Cipher]",  
+"user_input_to_decrypt":"[String to Decrypt]",  
+"1":"['Encrypt' or 'Decrypt', depending on desired action]"  
 }}
  
  ### Return
