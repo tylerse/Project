@@ -17,7 +17,7 @@ const pool = mysql2.createPool({
 
 export async function GetAllWorkouts() {
     try {
-        const query = 'SELECT * FROM workout'
+        const query = 'SELECT * FROM workouts'
         const result = await pool.query(query)
         return result[0];
     }
@@ -28,8 +28,19 @@ export async function GetAllWorkouts() {
 
 export async function GetWorkout(id){
     try {
-        const query = 'SELECT * FROM workout WHERE id= ?'
+        const query = 'SELECT * FROM workouts WHERE id= ?'
         const result = await pool.query(query, id)
+        return result[0];
+    }
+    catch (err) {
+        console.log(err)
+    }  
+}
+
+export async function GetExercisesByWorkout(id){
+    try {
+        const query = 'SELECT * FROM exercises WHERE workout_id= ?'
+        const result = await pool.query(query, [id])
         return result[0];
     }
     catch (err) {
@@ -39,7 +50,7 @@ export async function GetWorkout(id){
 
 export async function UpdateWorkout(id, data){
     try {
-        const query =  `UPDATE workout SET name= ?, date= ? WHERE id= ?;`
+        const query =  `UPDATE workouts SET name= ?, date= ? WHERE id= ?;`
         const result = await pool.query(query, [data.name, data.date, id])
         return result;
     }
@@ -50,11 +61,44 @@ export async function UpdateWorkout(id, data){
 
 export async function NewWorkout(data){
     try {
-        const query = `INSERT INTO workout (name, date) VALUES (?, ?);`
+        const query = `INSERT INTO workouts (name, date) VALUES (?, ?);`
         const result = await pool.query(query, [data.name, data.date])
         return result.insertId;
     }
-    catch{
+    catch (err) {
+        console.log(err);
+    }
+
+}
+
+export async function UpdateExercise(data){
+    try {
+        const query = `UPDATE exercises
+                        SET description = ?, sets = ?, weight = ?, repetitions = ?, notes = ?
+                        WHERE id= ?;`
+        const result = await pool.query(query, [                        
+                        data.description,
+                        data.sets,  
+                        data.weight,                        
+                        data.repetitions,
+                        data.notes,
+                        data.id
+                    ])
+        return result;
+    }
+    catch (err) {
+        console.log(err);
+    }
+
+}
+
+export async function DeleteExercise(id){
+    try {
+        const query = `DELETE FROM exercises WHERE id= ?`
+        const result = await pool.query(query, [id])
+        return result;
+    }
+    catch (err){
         console.log(err);
     }
 
