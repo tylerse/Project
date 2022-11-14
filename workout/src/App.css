@@ -191,3 +191,13 @@ th {
   font-size: larger;
   font-weight: bolder;
 }
+
+.fixed-overlay {
+  position:absolute;
+  width:80%;
+  background-color:white;
+}
+
+.fixed-overlay > input {
+  color:black;
+}

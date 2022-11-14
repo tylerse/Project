@@ -52,7 +52,7 @@ function Edit(){
             }
             {
                 isLoaded ? 
-                < WorkoutInfo data={ {'id': id} }/> :
+                < WorkoutInfo id = {id} /> :
                 <h2>...</h2>
             }
             

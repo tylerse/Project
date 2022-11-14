@@ -3,7 +3,7 @@ import DatePicker, {Date} from 'react-datepicker';
 import parseISO from 'date-fns/parseISO';
 import "react-datepicker/dist/react-datepicker.css";
 
-function WorkoutHeader({ name, date, setName, setDate, submit }){
+function WorkoutHeader({ name, date, setName, setDate, submit, units }){
 
     return (
         <div className="header">
@@ -20,8 +20,7 @@ function WorkoutHeader({ name, date, setName, setDate, submit }){
                 />
             </div>
             <div className="right">
-                <button className="confirm" onClick={submit}>Save Changes</button>
-                <button className="new-button" onClick={submit}>Add New Exercise</button>
+                <button className="confirm" onClick={() => submit()}>Save Changes</button>
             </div>
         </div>
     )
